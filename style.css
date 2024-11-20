@@ -1062,96 +1062,102 @@ form textarea {
 
 
 /*  contact section ends here  */
-
-
-/*  footer start from here  */
+/* Footer Styles */
 footer {
   padding: 50px 100px !important;
   width: 100%;
-  height: 50vh; /* Allow dynamic height for smaller screens */
+  height: 70vh; /* Fixed height as requested */
   background: black;
-  background-position: center;
-  background-size: cover;
   color: var(--white-color);
-  /* padding: 50px 20px !important; Reduce padding for smaller screens */
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  box-sizing: border-box; /* Ensure padding is included in height */
 }
 
+/* Left Section */
 .f-left {
-  width: 50%; /* Default for larger screens */
-  height: 100%; /* Adjust height for responsiveness */
+  width: 48%; /* Consistent width for left section */
+  height: 100%; /* Stretch to match footer height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
 }
 
 .f-left h1 {
-  margin-bottom: 40px;
-
+  margin-bottom: 30px;
+  font-size: 24px; /* Standard heading size */
 }
 
 .f-icons {
-  margin-bottom: 20px;
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* Wrap icons on smaller screens */
+  gap: 15px; /* Add consistent spacing */
 }
 
 .f-icons i {
   font-size: 30px;
   border: 1px solid var(--white-color);
-  padding: 20px;
+  padding: 15px;
   border-radius: 50%;
-  margin: 0 10px;
-  transition: 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .f-icons i:hover {
-  scale: 1.2;
+  transform: scale(1.2);
 }
 
+/* Right Section */
 .f-right {
-  width: 50%; /* Default for larger screens */
-  height: 100%; /* Adjust height for responsiveness */
+  width: 48%; /* Matches left section width */
+  height: 100%; /* Stretch to match footer height */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the image */
 }
 
 .f-right img {
   width: 100%;
-  height: 100%; /* Maintain aspect ratio for images */
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media (max-width: 770px) {
   footer {
-    flex-direction: column; /* Stack the footer sections */
-    align-items: center; /* Center content */
-    padding: 30px 15px !important; /* Reduce padding for smaller screens */
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+    padding: 30px 20px !important;
+    height: auto; /* Allow height to adjust dynamically for smaller screens */
   }
 
   .f-left, .f-right {
-    width: 100%; /* Full-width for stacked layout */
-    margin-bottom: 20px; /* Add spacing between sections */
-    text-align: center; /* Center text for smaller screens */
+    width: 100%; /* Full-width sections for smaller screens */
+    height: auto; /* Allow height to adjust dynamically */
+    margin-bottom: 20px; /* Add spacing between stacked sections */
+    text-align: center; /* Center align text */
   }
 
   .f-icons {
-    margin-top: 50px;
-
-    justify-content: center; /* Center icons for smaller screens */
-    flex-wrap: wrap; /* Wrap icons if they overflow */
+    justify-content: center;
+    gap: 10px; /* Reduce spacing for smaller screens */
   }
 
   .f-icons i {
-    margin: 10px; /* Reduce margin for compact spacing */
+    font-size: 26px;
+    padding: 12px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .f-icons i {
-    font-size: 24px; /* Smaller icons for very small screens */
-    padding: 15px; /* Adjust padding */
+@media (max-width: 480px) {
+  .f-left h1 {
+    font-size: 18px; /* Smaller heading size */
   }
 
-  .f-left h1 {
-    font-size: 18px; /* Reduce heading size */
+  .f-icons i {
+    font-size: 22px; /* Smaller icons for very small screens */
+    padding: 10px;
   }
 }
