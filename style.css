@@ -1,0 +1,1157 @@
+/* Global Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  
+}
+
+:root {
+  --font-family: sans-serif;
+  --green-color: #85965c;
+  --white-color: #ebebdc;
+  --gold-color: goldenrod;
+}
+
+header {
+  width: 100% !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: auto;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensures vertical alignment */
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.logo img {
+  border-radius: 50%;
+  width: 100% !important;
+  height: 100% !important;
+  border: 2px solid white;
+}
+
+nav {
+  width: 50% !important;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Aligns nav items vertically */
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none; /* Removes underline from links */
+  color: #000; /* Default text color */
+  font-size: 16px; /* Adjust as needed */
+  display: flex;
+  align-items: center; /* Centers images or icons inside links */
+}
+
+nav ul li a img {
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: 0.5s ease; /* Smooth animation on hover */
+}
+
+nav ul li a img:hover {
+  transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    padding: 10px;
+    flex-direction: row; /* Ensure header items are in row on mobile */
+    justify-content: space-evenly; /* Maintain space between logo and nav */
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  nav {
+    overflow-x: auto;
+    width: 90%; /* Adjust width of nav for mobile */
+  }
+
+  nav ul {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 0 10px; /* Ensure proper space between nav items */
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+
+  nav {
+    width: 70%;
+  }
+
+  nav ul li a img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* .container-fluid{
+    padding: 0px !important;
+} */
+
+.hero {
+  width: 100% !important;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/60.webp);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 15rem;
+  font-family: var(--font-family);
+  animation: colorChange 5s infinite;
+}
+
+.hero h3 {
+  color: var(--white-color);
+  margin-bottom: 50px;
+}
+
+@keyframes colorChange {
+  0% {
+    color: #d4bee4;
+  }
+  25% {
+    color: #9694ff;
+  }
+  50% {
+    color: #7bd3ea;
+  }
+  75% {
+    color: #eed3b1;
+  }
+  100% {
+    color: #eed3d9; /* Loops back to the start color */
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .hero h1 {
+    font-size: 5rem;
+  }
+}
+
+.hero-btn a {
+  align-items: center;
+  padding: 15px 50px;
+  margin: 0 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  color: white;
+  font-size: x-large;
+  background: blueviolet;
+  transition: 1s ease;
+}
+
+.hero-btn a:hover {
+  background: rgb(174, 112, 232);
+}
+
+@media only screen and (max-width: 500px) {
+  .hero-btn {
+    padding: 20px 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-btn a {
+    margin-bottom: 30px;
+  }
+}
+
+/*  hero ends here  */
+
+/*  hungry start from here */
+.hungry {
+  width: 100%;
+  height: 70vh;
+  padding: 50px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(images/parallex.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  align-items: center;
+}
+.hungry h1 {
+  font-size: 8rem;
+  margin-bottom: 50px;
+  color: var(--white-color);
+}
+
+.hungry-btn a {
+  align-items: center;
+  padding: 15px 50px;
+  margin: 0 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  color: white;
+  font-size: x-large;
+  background: blueviolet;
+  transition: 1s ease;
+  margin-bottom: 30px;
+}
+
+.hungry-btn a:hover {
+  background: rgb(174, 112, 232);
+}
+
+@media only screen and (max-width: 1000px) {
+  .hungry h1 {
+    font-size: 5rem;
+  }
+}
+
+/* hungry ends here   */
+
+/*  concept start  */
+
+.concept {
+  width: 100%;
+  padding: 50px;
+}
+
+.concept-heading {
+  text-align: center;
+}
+
+.concept-heading h1 {
+  font-size: 8rem;
+
+  font-weight: bold;
+  background-image: linear-gradient(to right, #b4aee8, #c29fe5);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+@media only screen and (max-width: 600px) {
+  .concept-heading h1 {
+    font-size: 5rem;
+  }
+}
+
+.concept-box {
+  padding: 0px 50px;
+  width: 100% !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.concept-box::before,
+.concept-box::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left-box {
+  padding: 0 30px;
+  padding-top: 100px;
+  text-align: center;
+  width: 50%;
+  height: 700px;
+  position: sticky;
+  top: 200px;
+  /* border-radius: 1rem; */
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  background-color: var(--green-color);
+  color: var(--white-color);
+}
+
+.left-box h1 {
+  margin-bottom: 20px;
+  font-size: 5rem;
+}
+
+@media (max-width: 500px) {
+  .left-box h1 {
+    font-size: 3rem;
+  }
+}
+
+.right-box {
+  width: 50%;
+  padding-left: 30px;
+  padding-top: 30rem;
+  /* padding-bottom: 100px; */
+  /* background-color: yellow; */
+}
+
+.right-box > div {
+  width: 100%;
+  height: 900px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.right-box div:nth-child(1) {
+  background: url("images/1.jpg"); /* Ensure the file path is correct */
+  background-position: center;
+  background-size: cover;
+}
+.right-box div:nth-child(2) {
+  background: url("images/2.jpg"); /* Ensure the file path is correct */
+  background-position: center;
+  background-size: cover;
+}
+
+.right-box div:nth-child(3) {
+  background: url("images/3.jpg"); /* Ensure the file path is correct */
+  background-position: center;
+  background-size: cover;
+}
+.right-box div:nth-child(4) {
+  background: url("images/4.jpg"); /* Ensure the file path is correct */
+  background-position: center;
+  background-size: cover;
+}
+.right-box div:nth-child(5) {
+  background: url("images/5.jpg"); /* Ensure the file path is correct */
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .concept-box {
+    flex-direction: row; /* Keep side-by-side layout */
+  }
+
+  .left-box {
+    width: 50%; /* 50% width on tablet */
+    height: 700px;
+    position: sticky;
+    top: 150px;
+    border-radius: 10px;
+  }
+
+  .right-box {
+    width: 50%; /* 50% width on tablet */
+    padding-left: 20px;
+    padding-top: 15rem;
+    padding-bottom: 40px;
+  }
+
+  .right-box > div {
+    height: 300px !important; /* Adjust height for tablet */
+    border-radius: 10px; /* Slightly rounded corners */
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .concept-box {
+    flex-direction: column; /* Stack left and right boxes */
+  }
+
+  .left-box {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Adjust height to fit content */
+    position: static; /* Remove sticky positioning */
+    border-radius: 0; /* Remove rounded corners */
+    padding: 10px;
+  }
+
+  .right-box {
+    width: 100%; /* Full width on mobile */
+    padding-left: 15px;
+    padding-top: 10rem;
+    padding-bottom: 20px;
+    margin-left: -10px;
+  }
+
+  .right-box > div {
+    height: 300px; /* Adjust height for mobile */
+    margin-bottom: 20px; /* Add space between blocks */
+    border-radius: 0; /* Remove circular border radius */
+  }
+}
+
+.coffee-left-box {
+  padding: 0 30px;
+  padding-top: 100px;
+  text-align: center;
+  width: 50%;
+  height: 700px;
+  position: sticky;
+  top: 0px;
+  /* border-radius: 1rem; */
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background-color: var(--green-color);
+  color: var(--white-color);
+}
+
+.coffee-left-box h1 {
+  margin-bottom: 20px;
+  font-size: 5rem;
+}
+
+@media (max-width: 1000px) {
+  .coffee-left-box h1 {
+    font-size: 3rem;
+  }
+}
+
+.coffee-right-box {
+  width: 50%;
+  padding-left: 30px;
+  /* padding-top: 30rem; */
+  padding-bottom: 100px;
+  /* background-color: yellow; */
+}
+
+.coffee-right-box > div {
+  width: 100%;
+  height: 900px;
+  border-radius: 50%;
+  background-color: blue;
+}
+
+.coffee-right-box div:nth-child(1) {
+  background: url("images/29.webp"); /* Ensure the file path is correct */
+  background-position: center;
+  background-size: cover;
+}
+.coffee-right-box div:nth-child(2) {
+  background: url("images/39.webp"); /* Ensure the file path is correct */
+  background-position: center;
+  background-size: cover;
+}
+
+.coffee-right-box div:nth-child(3) {
+  background: url("images/77.webp"); /* Ensure the file path is correct */
+  background-position: center;
+  background-size: cover;
+}
+.coffee-right-box div:nth-child(4) {
+  background: url("images/65.webp"); /* Ensure the file path is correct */
+  background-position: center;
+  background-size: cover;
+}
+.coffee-right-box div:nth-child(5) {
+  background: url("images/76.webp"); /* Ensure the file path is correct */
+  background-position: center;
+  background-size: cover;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.block {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.8;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.block {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .concept-box {
+    flex-direction: row; /* Keep side-by-side layout */
+    padding: 0px !important;
+  }
+
+  .coffee-left-box {
+    width: 50%; /* 50% width on tablet */
+    height: 800px;
+    position: sticky;
+    top: 150px;
+    border-radius: 10px;
+  }
+
+  .coffee-right-box {
+    width: 50%; /* 50% width on tablet */
+    padding-left: 20px;
+    padding-top: 15rem;
+    padding-bottom: 40px;
+  }
+
+  .coffee-right-box > div {
+    height: 300px !important; /* Adjust height for tablet */
+    border-radius: 10px; /* Slightly rounded corners */
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .concept-box {
+    flex-direction: column; /* Stack left and right boxes */
+    padding: 0%;
+  }
+
+  .coffee-left-box {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Adjust height to fit content */
+    position: static; /* Remove sticky positioning */
+    border-radius: 0; /* Remove rounded corners */
+    padding: 10px;
+  }
+
+  .coffee-right-box {
+    width: 100%; /* Full width on mobile */
+    padding-left: 15px;
+    margin-left: -10px;
+    padding-top: 10rem;
+    padding-bottom: 20px;
+  }
+
+  .coffee-right-box > div {
+    height: 300px; /* Adjust height for mobile */
+    margin-bottom: 20px; /* Add space between blocks */
+    border-radius: 0; /* Remove circular border radius */
+  }
+}
+
+/*  Menu animation  */
+.menu {
+  width: 100%;
+  padding: 50px;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 20px;
+  justify-items: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
+
+.menu-circle {
+  background-color: var(--green-color);
+  color: var(--white-color);
+
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px; /* Set the image width to 350px */
+  height: 350px; /* Set the image height to 350px */
+  border-radius: 50%;
+}
+
+.menu img {
+  width: 350px; /* Set the image width to 350px */
+  height: 350px; /* Set the image height to 350px */
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.menu img:hover {
+  scale: 1.2;
+}
+
+@media (max-width: 768px) {
+  .menu img:nth-child(even) {
+    display: none;
+  }
+}
+
+/*  card animation */
+
+/* Card Box Container */
+.card-box {
+  width: 100%;
+  padding: 100px 50px; /* Removed the !important */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Card Styling */
+.card-div {
+  position: sticky;
+  top: 0; /* Distance from top before it becomes sticky */
+  width: 70%;
+  height: 800px;
+  text-align: center;
+  padding: 30px;
+  overflow: hidden;
+  /* opacity: 0.9; */
+  transition: transform 0.3s ease, opacity 0.3s ease, z-index 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: -50px; /* Overlap effect */
+}
+
+/* Card Image Styling */
+.card-div img {
+  width: 250px; /* Default image size */
+  height: 250px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 900px) {
+  .card-box {
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+
+  .card-div img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-div {
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+/* Heading Styling */
+.card-div h1 {
+  font-size: 3rem;
+}
+
+/* Card Overlap - Styling by Child */
+.card-div:nth-child(1) {
+  color: var(--white-color);
+  z-index: 1;
+  background-color: var(--green-color);
+  margin-top: 0;
+}
+
+.card-div:nth-child(2) {
+  z-index: 2;
+  color: var(--green-color);
+  background-color: var(--white-color);
+  margin-top: -50px;
+}
+
+.card-div:nth-child(3) {
+  z-index: 3;
+  color: var(--white-color);
+  background-color: var(--green-color);
+  margin-top: -100px;
+}
+
+.card-div:nth-child(4) {
+  z-index: 4;
+  color: var(--green-color);
+  background-color: var(--white-color);
+  margin-top: -150px;
+}
+
+/* Sticky Effect */
+.card-div.sticky {
+  transform: translateY(-20px);
+  opacity: 1;
+  z-index: 5;
+}
+
+.r-box {
+  margin-top: 40px;
+  width: 100%;
+  height: 80%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url(images/60.webp);
+}
+
+.spotify-scroll-container {
+  width: 100%;
+  height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.spotify-scroll-container iframe {
+}
+
+/*  card stacking ends here  */
+.instagram {
+    width: 100%;
+    background-color: var(--green-color);
+    color: var(--white-color);
+}
+
+.insta-heading h1 {
+    padding: 50px;
+    font-size: 5rem; /* Reduced font size for smaller screens */
+    text-align: center;
+}
+
+.instagram-photos {
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Added gap for better spacing */
+}
+
+
+
+.i-left,
+.i-center,
+.i-right {
+    width: 400px; /* Adjusted size for smaller screens */
+    height: 600px; /* Adjusted height */
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #000;
+    /* overflow: hidden; */
+    /* position: relative; */
+    transform: none; /* Removed rotation for small screens */
+}
+
+.i-left img,
+.i-center img,
+.i-right img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.image-slider {
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+
+.image-slider img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: fade 12s infinite;
+}
+
+.image-slider img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.image-slider img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.image-slider img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+.image-slider img:nth-child(4) {
+    animation-delay: 9s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.i-follow {
+    text-align: center;
+    width: 100%;
+    height: 20%;
+}
+
+.i-follow h3 {
+    color: var(--green-color);
+}
+
+.i-follow a {
+    text-decoration: none;
+    color: var(--green-color);
+    font-size: 2rem; /* Adjusted font size */
+    font-weight: 700;
+}
+
+
+.i-left{
+    transform: rotate(10deg);
+    background-color: var(--white-color);
+}
+.i-left img{
+    transform: rotate(10deg);
+}
+
+
+.i-right{
+    transform: rotate(-10deg);
+    background-color: var(--white-color);
+}
+.i-right img{
+    transform: rotate(-10deg);
+}
+
+
+.i-center {
+    z-index: 3  ;
+}
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .insta-heading h1 {
+        font-size: 3.5rem; /* Smaller font size */
+        padding: 20px;
+    }
+
+    .instagram-photos {
+        padding: 20px;
+        gap: 15px; /* Reduced gap */
+    }
+
+    .i-left,
+    .i-center,
+    .i-right {
+        width: 400px; /* Adjusted size for tablets */
+        height: 400px; /* Adjusted height */
+        margin-bottom: 40px;
+    }
+
+    .i-follow a {
+        font-size: 1.8rem; /* Adjusted font size */
+    }
+}
+
+@media (max-width: 600px) {
+    .insta-heading h1 {
+        font-size: 2.5rem; /* Further reduced for mobile */
+    }
+
+    .instagram-photos {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .i-left,
+    .i-center,
+    .i-right {
+        width: 100%; /* Adjusted size for phones */
+        height: 500px; /* Adjusted height */
+        margin-bottom: 40px;
+    }
+
+    .i-center,.i-left,.i-right{
+        transform: rotate(0deg) !important;
+    }
+
+    .i-center img,.i-left img , .i-right img{
+        transform: rotate(0deg);
+    }
+
+    .i-follow a {
+        font-size: 1.5rem; /* Further reduced */
+    }
+}
+
+
+
+/*  instagram ends here  */
+
+
+
+/*  contact starts from here  */
+/* Contact Section */
+.contact {
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.contact-heading {
+    width: 100%;
+    text-align: center;
+    color: var(--green-color);
+}
+
+.contact-heading h1 {
+    font-size: 3rem; /* Adjusted for better responsiveness */
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Contact Form Layout */
+.contact-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Form Styles */
+form {
+    width: 48%; /* Reduced width for better spacing */
+    padding: 20px;
+    /* box-sizing: border-box; */
+    /* background-color: #f8f8f8; */
+    border-radius: 10px;
+    /* box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); */
+}
+
+form p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+form span {
+    color: red;
+}
+
+form input,
+form textarea {
+    outline: none;
+    border: 1px solid gray;
+
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    /* border: 1px solid #ddd; */
+    border-radius: 5px;
+    outline: none;
+}
+
+
+
+form textarea {
+    height: 250px;
+}
+
+/* Image Section */
+.contact-img {
+    width: 48%; /* Reduced width for better spacing */
+    padding: 20px;
+}
+
+.contact-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .contact-heading h1 {
+        font-size: 2.5rem; /* Adjust font size on smaller screens */
+    }
+
+    .contact-form {
+        flex-direction: column;
+    }
+
+    form,
+    .contact-img {
+        width: 100%;
+    }
+
+    form textarea {
+        height: 200px;
+    }
+}
+
+
+
+
+/*  contact section ends here  */
+
+
+/*  footer start from here  */
+footer {
+  padding: 50px 100px !important;
+  width: 100%;
+  height: 50vh; /* Allow dynamic height for smaller screens */
+  background: black;
+  background-position: center;
+  background-size: cover;
+  color: var(--white-color);
+  /* padding: 50px 20px !important; Reduce padding for smaller screens */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.f-left {
+  width: 50%; /* Default for larger screens */
+  height: 100%; /* Adjust height for responsiveness */
+}
+
+.f-left h1 {
+  margin-bottom: 40px;
+
+}
+
+.f-icons {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+}
+
+.f-icons i {
+  font-size: 30px;
+  border: 1px solid var(--white-color);
+  padding: 20px;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: 0.5s ease-in-out;
+}
+
+.f-icons i:hover {
+  scale: 1.2;
+}
+
+.f-right {
+  width: 50%; /* Default for larger screens */
+  height: 100%; /* Adjust height for responsiveness */
+}
+
+.f-right img {
+  width: 100%;
+  height: 100%; /* Maintain aspect ratio for images */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  footer {
+    flex-direction: column; /* Stack the footer sections */
+    align-items: center; /* Center content */
+    padding: 30px 15px !important; /* Reduce padding for smaller screens */
+  }
+
+  .f-left, .f-right {
+    width: 100%; /* Full-width for stacked layout */
+    margin-bottom: 20px; /* Add spacing between sections */
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .f-icons {
+    margin-top: 50px;
+
+    justify-content: center; /* Center icons for smaller screens */
+    flex-wrap: wrap; /* Wrap icons if they overflow */
+  }
+
+  .f-icons i {
+    margin: 10px; /* Reduce margin for compact spacing */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .f-icons i {
+    font-size: 24px; /* Smaller icons for very small screens */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .f-left h1 {
+    font-size: 18px; /* Reduce heading size */
+  }
+}
